@@ -1,0 +1,8 @@
+{
+    "chromeWebSecurity": false,
+    "env" : {
+        "apiUrl": "https://the-internet.herokuapp.com/basic_auth",
+        "userEmail": "admin",
+        "userPassword": "admin"
+    }
+}
