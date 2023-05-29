@@ -26,4 +26,12 @@ describe('validate headers ', () => {
             expect(response.body.name).to.eq('ditto')
     })})
     
+    it('Validate negative respon status code', () =>{
+        cy.request({
+            method: 'GET',
+            url : 'https://pokeapi.co/api/v2/pokemon/eduwork',
+            failOnStatusCode: false
+        }).as('eduwork')
+        cy.get('@eduwork').its('status').should('equal', 404)
+    })
 })
